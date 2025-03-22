@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bullshit Button</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+            margin: 0;
+        }
+        button {
+            font-size: 24px;
+            padding: 15px 30px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container" id="bullshitButton">
+        <img src="bs-button.png" alt="Bullshit Button">
+    </div>
+    <audio id="bullshitSound" src="bullshit.mp3"></audio>
+    <script>
+        document.getElementById('bullshitButton').addEventListener('click', function() {
+            document.getElementById('bullshitSound').play();
+        });
+    </script>
+</body>
+</html>
